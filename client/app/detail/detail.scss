@@ -1,0 +1,28 @@
+.detail-view {
+    @extend .container;
+    background-color: $potato-color;
+    padding: 60px;
+    border-color: 1px solid $border-color;
+}
+
+.detail-view header {
+  display: flex;
+  justify-content: space-between;
+
+  i {
+    margin: 20px 0;
+    cursor: pointer;
+  }
+
+  h2 {
+    max-width: 100%;
+    word-break: break-all;
+    padding-right: 30px;
+  }
+
+}
+
+.detail-description {
+
+
+}

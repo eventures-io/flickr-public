@@ -1,0 +1,21 @@
+<main>
+    <section class="feed-view">
+        <form class="tag-form">
+                <input type="text" class="form-control"  data-ng-model="tag" placeholder="Search by tag">
+                <button type="submit" class="btn btn-default btn-search" data-ng-click="search()">Search</button>
+        </form>
+        <ul class="feed-list" data-ng-repeat="picture in feedlist">
+            <li>
+                <img src="{{picture.media}}" data-ng-click="showDetail(picture.id)">
+                <div class="card-data">
+                    <h2 data-ng-click="showDetail(picture.id)">{{picture.title}}</h2>
+                    <h4>{{picture.published}}</h4>
+                    <a href="{{picture.authorLink}}">Photo author</a>
+                    <a href="{{picture.link}}">View on Flickr</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <div class="error" data-ng-class="loadError">Could not load pictures</div>
+</main>
+

@@ -1,0 +1,13 @@
+<section class="detail-view">
+<header class="header">
+    <h2>{{picture.title}}</h2>
+    <i class="fa fa-chevron-circle-left fa-lg" ui-sref="main" ui-sref-opts="{reload: true}">&nbsp;back</i>
+</header>
+<span class="meta"></span>
+<div class="detail-description">
+   <div ng-bind-html="picture.description | HtmlFilter"></div>
+    <span class="detail-tags">
+        <a data-ng-repeat="tag in picture.tags" href="#" data-ng-click="filterByTag(tag)">{{tag}}</a>
+    </span>
+</div>
+</section>

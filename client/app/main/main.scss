@@ -1,0 +1,84 @@
+
+.feed-view {
+  @extend .container;
+  margin: 0 auto;
+}
+
+.feed-view h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.feed-view ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.feed-view ul li {
+  width: 100%;
+  height: 120px;
+  margin: 0;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: $border-color;
+  background-color: $potato-color;
+  border-radius: 4px;
+  img {
+    float: left;
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+.feed-view ul:last-child {
+  border-bottom: 1px solid $border-color;
+}
+
+@media (max-width: 800px) {
+
+  .feed-view ul li h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.error {
+  visibility: hidden;
+  width: 400px;
+  margin: 100px auto;
+  color: red;
+  font-size: x-large;
+  font-weight: bold;
+
+}
+
+.show {
+  visibility: visible;
+}
+
+
+.tag-form {
+  width: 100%;
+  height: 50px;
+  margin: 10px;
+  display: flex;
+}
+
+.tag-form input {
+  display: inline;
+  //width: 80%;
+}
+
+
+.btn-search {
+  height: 34px;
+  margin: 0 20px;
+}
