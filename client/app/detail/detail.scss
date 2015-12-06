@@ -8,9 +8,10 @@
 .detail-view header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 
   i {
-    margin: 20px 0;
     cursor: pointer;
   }
 
@@ -19,10 +20,9 @@
     word-break: break-all;
     padding-right: 30px;
   }
-
 }
 
-.detail-description {
-
+.detail-tags {
+  word-wrap:break-word;
 
 }

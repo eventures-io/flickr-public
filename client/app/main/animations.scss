@@ -1,0 +1,43 @@
+/* feed stagger -----*/
+.feed {
+  position: relative;
+}
+
+.feed.ng-enter-stagger,
+.feed.ng-leave-stagger,
+.feed.ng-move-stagger {
+  animation-delay: 0.2s;
+  animation-duration: 0;
+}
+
+.feed.ng-move,
+.feed.ng-enter {
+  opacity: 0;
+  animation: enter-animation 0.3s;
+}
+
+.feed.ng-leave {
+  animation: leave-animation 0.3s;
+}
+
+@keyframes enter-animation {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes leave-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+

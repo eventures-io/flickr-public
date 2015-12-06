@@ -26,8 +26,9 @@ a {
 a:hover {
   color: gray;
 }
-// Component styles are injected through grunt
+
 // injector
 @import 'detail/detail.scss';
+@import 'main/animations.scss';
 @import 'main/main.scss';
 // endinjector

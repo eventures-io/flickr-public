@@ -4,6 +4,7 @@ angular.module('potatoApp', [
         'ngCookies',
         'ngResource',
         'ngSanitize',
+        'ngAnimate',
         'ui.router'
     ])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -21,10 +22,18 @@ angular.module('potatoApp', [
                 templateUrl: 'app/detail/detail.html',
                 controller: 'DetailController'
             });
+
         $locationProvider.html5Mode(true);
     })
-    .filter('HtmlFilter', ['$sce', function ($sce) {
+    .filter('htmlFilter', ['$sce', function ($sce) {
         return function (text) {
             return $sce.trustAsHtml(text);
         };
-    }]);
+    }]).filter('dateTimeFilter', function ($filter) {
+        return function (inDate) {
+            var date = $filter('date')(new Date(inDate),
+                "dd MMM yyyy 'at' HH:mm");
+            return date;
+        };
+    });
+
