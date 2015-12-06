@@ -18,11 +18,11 @@ angular.module('potatoApp')
 
         $scope.showDetail = function(id) {
             $state.go('detail', {pictureId: id})
-        }
+        };
 
         if($state.params.tag) {
             $scope.tag = $state.params.tag;
-            $scope.search($state.params.searchTag);
+            $scope.search();
         } else {
             FlickrResource.getFeedList()
                 .then(function (feedlist) {
