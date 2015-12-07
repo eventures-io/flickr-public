@@ -310,7 +310,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: 'tempApp',
+        module: 'potatoApp',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,
@@ -367,7 +367,9 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             'package.json',
-            'server/**/*'
+            'server/**/*',
+             'Procfile',
+             '.env'
           ]
         }]
       },
@@ -389,8 +391,8 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'heroku',
-          branch: 'master'
+            remote: 'git@heroku.com:flickr-public.git',
+            branch: 'master'
         }
       },
       openshift: {
@@ -660,8 +662,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
-    'test',
     'build'
   ]);
 };

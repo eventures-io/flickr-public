@@ -32,9 +32,9 @@ angular.module('potatoApp').factory('FlickrResource', function ($http, $q, $log,
     var loadPictures = function (tag) {
         var url;
         if (tag !== undefined && !tag.trim()) {
-            url = 'http://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=JSON_CALLBACK';
+            url = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=JSON_CALLBACK';
         } else {
-            url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=' + tag + '&tagmode=any&format=json&jsoncallback=JSON_CALLBACK';
+            url = 'https://api.flickr.com/services/feeds/photos_public.gne?tags=' + tag + '&tagmode=any&format=json&jsoncallback=JSON_CALLBACK';
         }
         var deferred = $q.defer();
 
